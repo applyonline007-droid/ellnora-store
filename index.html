@@ -1,1 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>ELLNORA AYURVEDIC | Luxury Rooted in Ayurveda</title>
+
+  <meta name="description"
+    content="Ellnora Ayurvedic - Premium Ayurvedic personal care products rooted in traditional Ayurveda.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #faf8f2;
+      color: #25251f;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #42613d;
+    }
+
+    .tagline {
+      font-size: 10px;
+      color: #8b7250;
+      display: block;
+      letter-spacing: 1px;
+      margin-top: 3px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #42613d;
+    }
+
+    .cart {
+      background: #42613d;
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 25px;
+    }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(250,248,242,.97), rgba(250,248,242,.65)),
+        url("assets/hero.jpg") center/cover;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      width: 100%;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .small-title {
+      color: #8b7250;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      max-width: 650px;
+      font-size: 58px;
+      line-height: 1.05;
+      color: #344d31;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 560px;
+      line-height: 1.7;
+      color: #666;
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #42613d;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .btn.light {
+      background: transparent;
+      color: #42613d;
+      border: 1px solid #42613d;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 75px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      color: #344d31;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #777;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid #eee;
+      transition: .3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+
+    .product-img {
+      height: 260px;
+      background: #f1eee5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #888;
+    }
+
+    .product-info {
+      padding: 18px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 8px;
+      color: #344d31;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #8b7250;
+      margin-bottom: 15px;
+    }
+
+    .product-btn {
+      width: 100%;
+      border: none;
+      background: #42613d;
+      color: white;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .benefits {
+      background: #344d31;
+      color: white;
+      max-width: none;
+    }
+
+    .benefit-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+      padding: 0 20px;
+    }
+
+    .benefit {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .benefit-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .benefit h3 {
+      margin-bottom: 10px;
+    }
+
+    .benefit p {
+      color: #dce4d8;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .cta {
+      text-align: center;
+      background: #eee8da;
+      max-width: none;
+    }
+
+    .cta h2 {
+      color: #344d31;
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: #20271e;
+      color: white;
+      padding: 50px 20px 25px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #c8cec5;
+      font-size: 14px;
+      line-height: 1.8;
+      text-decoration: none;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 35px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #3b4339;
+      color: #aaa;
+      font-size: 13px;
+    }
+
+    @media(max-width: 850px) {
+      nav {
+        display: none;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width: 500px) {
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .benefit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div>
+      <div class="logo">ELLNORA</div>
+      <span class="tagline">LUXURY ROOTED IN AYURVEDA</span>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="track-order.html">Track Order</a>
+      <a href="cart.html" class="cart">🛒 Cart</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="small-title">ELLNORA AYURVEDIC</div>
+
+    <h1>
+      Luxury Personal Care,
+      Rooted in Ayurveda.
+    </h1>
+
+    <p>
+      Discover premium Ayurvedic personal care products
+      inspired by traditional wellness and created for
+      modern everyday living.
+    </p>
+
+    <a href="shop.html" class="btn">Shop Now</a>
+    <a href="#products" class="btn light">Explore Products</a>
+  </div>
+</section>
+
+<section id="products">
+
+  <div class="section-title">
+    <h2>Featured Products</h2>
+    <p>Explore our Ayurvedic personal care collection.</p>
+  </div>
+
+  <div class="products">
+
+    <div class="product">
+      <div class="product-img">Product Image</div>
+      <div class="product-info">
+        <h3>Ellnora Ayurvedic Soap</h3>
+        <div class="price">₹175</div>
+        <button class="product-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-img">Product Image</div>
+      <div class="product-info">
+        <h3>Ellnora Herbal Care</h3>
+        <div class="price">₹175</div>
+        <button class="product-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-img">Product Image</div>
+      <div class="product-info">
+        <h3>Ellnora Beauty Care</h3>
+        <div class="price">₹175</div>
+        <button class="product-btn">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product">
+      <div class="product-img">Product Image</div>
+      <div class="product-info">
+        <h3>Ellnora Wellness</h3>
+        <div class="price">₹175</div>
+        <button class="product-btn">Add to Cart</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="benefits">
+
+  <div class="benefit-grid">
+
+    <div class="benefit">
+      <div class="benefit-icon">🌿</div>
+      <h3>Ayurvedic Inspiration</h3>
+      <p>Inspired by traditional Ayurvedic wellness.</p>
+    </div>
+
+    <div class="benefit">
+      <div class="benefit-icon">✨</div>
+      <h3>Premium Care</h3>
+      <p>Designed for a modern personal care experience.</p>
+    </div>
+
+    <div class="benefit">
+      <div class="benefit-icon">💚</div>
+      <h3>Everyday Wellness</h3>
+      <p>Personal care made for your daily routine.</p>
+    </div>
+
+    <div class="benefit">
+      <div class="benefit-icon">📦</div>
+      <h3>Easy Ordering</h3>
+      <p>Simple online shopping and order tracking.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+
+  <h2>Experience Ellnora</h2>
+
+  <p>
+    Bring the timeless inspiration of Ayurveda
+    into your everyday personal care routine.
+  </p>
+
+  <br>
+
+  <a href="shop.html" class="btn">Explore Collection</a>
+
+</section>
+
+<footer>
+
+  <div class="footer-grid">
+
+    <div>
+      <h3>ELLNORA AYURVEDIC</h3>
+      <p>
+        Luxury rooted in Ayurveda.<br>
+        Premium personal care for modern living.
+      </p>
+    </div>
+
+    <div>
+      <h3>Quick Links</h3>
+      <p>
+        <a href="shop.html">Shop</a><br>
+        <a href="about.html">About Us</a><br>
+        <a href="track-order.html">Track Order</a>
+      </p>
+    </div>
+
+    <div>
+      <h3>Customer Care</h3>
+      <p>
+        Contact Us<br>
+        Order Support<br>
+        Shipping Information
+      </p>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 ELLNORA AYURVEDIC. All Rights Reserved.
+  </div>
+
+</footer>
+
+</body>
+</html>
